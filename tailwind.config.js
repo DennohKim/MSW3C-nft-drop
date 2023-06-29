@@ -81,6 +81,8 @@ module.exports = {
       backgroundImage: {
         space:
           "url(https://res.cloudinary.com/dqab6gg7d/image/upload/v1688000361/bg2_rznqty.jpg)",
+        nftFrame:
+          "url(https://res.cloudinary.com/dqab6gg7d/image/upload/v1688046349/6084473_kmubrs.png)",
       },
     },
   },
