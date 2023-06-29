@@ -270,7 +270,7 @@ export default function Home() {
   }
 
   return (
-    <div className="h-full w-full bg-space bg-cover bg-center bg-no-repeat">
+    <div className="h-full w-full bg-space bg-cover bg-center bg-no-repeat z-100">
       <ConnectWallet className="!absolute !right-4 !top-2" theme={theme} />
       <div className="grid h-full grid-cols-1 bg-black/50 lg:grid-cols-12">
         <div className="hidden h-full w-full items-center justify-center lg:col-span-5 lg:flex lg:px-12">
@@ -281,8 +281,8 @@ export default function Home() {
         </div>
 
         <div className="col-span-1 flex w-full flex-col items-center justify-center space-y-3 lg:col-span-7">
-          <div className="mt-10 flex w-full max-w-xl flex-col gap-4 rounded-xl bg-black/50 px-12 py-6 lg:border lg:border-gray-400 lg:dark:border-gray-800">
-            <h2 className="text-lg font-bold tracking-wider text-gray-500 xs:text-xl lg:text-2xl">
+          <div className="mt-10 flex w-full max-w-xl flex-col gap-4 rounded-xl bg-black/60 px-12 py-6 lg:border lg:border-gray-400 lg:dark:border-gray-800">
+            <h2 className="text-lg font-bold tracking-wider text-white xs:text-xl lg:text-2xl">
               How to claim the NFT
             </h2>
             <p className="text-sm">
@@ -319,7 +319,7 @@ export default function Home() {
               tokens).💰 You are now ready to claim the NFT.🎉
             </p>
           </div>
-          <div className="flex w-full max-w-xl flex-col gap-4 rounded-xl bg-black/50 p-12 lg:border lg:border-gray-400 lg:dark:border-gray-800">
+          <div className="flex w-full max-w-xl flex-col gap-4 rounded-xl bg-black/60 p-12 lg:border lg:border-gray-400 lg:dark:border-gray-800">
             <div className="mt-8 flex w-full xs:mb-8 xs:mt-0 lg:hidden">
               <HeadingImage
                 src={contractMetadata.data?.image || firstNft?.metadata.image}
@@ -347,7 +347,7 @@ export default function Home() {
                   </span>
                 </p>
               )}
-              <h1 className="text-2xl font-bold xs:text-3xl lg:text-4xl">
+              <h1 className="text-3xl font-bold xs:text-3xl lg:text-4xl">
                 {contractMetadata.isLoading ? (
                   <div
                     role="status"
