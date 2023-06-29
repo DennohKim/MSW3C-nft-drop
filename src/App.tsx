@@ -302,9 +302,8 @@ export default function Home() {
             <p className="text-sm">
               <span className="pr-2 font-bold">2:</span>Go to
               <a href="https://chainlist.org/" target="_blank">
-                {" "}
                 chainlist.org
-              </a>{" "}
+              </a>
               and search for "mumbai" (polygon testnet). Make sure to select
               "include testnets" and add it to Metamask. Confirm the chain ID.😎
             </p>
@@ -313,7 +312,7 @@ export default function Home() {
               Finally, Copy your address and visit the
               <a href="https://faucet.polygon.technology/" target="_blank">
                 {" "}
-                polygon faucet.{" "}
+                polygon faucet.
               </a>
               Paste your wallet address and submit to receive some MATIC (test
               tokens).💰 You are now ready to claim the NFT.🎉
@@ -321,6 +320,7 @@ export default function Home() {
           </div>
           <div className="flex w-full max-w-xl flex-col gap-4 rounded-xl bg-black/60 p-12 lg:border lg:border-gray-400 lg:dark:border-gray-800">
             <div className="mt-8 flex w-full xs:mb-8 xs:mt-0 lg:hidden">
+
               <HeadingImage
                 src={contractMetadata.data?.image || firstNft?.metadata.image}
                 isLoading={isLoading}
