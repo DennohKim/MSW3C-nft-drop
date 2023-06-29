@@ -23,6 +23,7 @@ import {
   primaryColorConst,
   themeConst,
 } from "./consts/parameters";
+import { Link } from "react-router-dom";
 
 const urlParams = new URL(window.location.toString()).searchParams;
 const contractAddress = urlParams.get("contract") || contractConst || "";
@@ -269,17 +270,56 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen w-screen bg-space bg-no-repeat bg-center bg-cover">
-      <ConnectWallet className="!absolute !right-4 !top-4" theme={theme} />
-      <div className="bg-black/50 grid h-screen grid-cols-1 lg:grid-cols-12">
+    <div className="h-full w-full bg-space bg-cover bg-center bg-no-repeat">
+      <ConnectWallet className="!absolute !right-4 !top-2" theme={theme} />
+      <div className="grid h-full grid-cols-1 bg-black/50 lg:grid-cols-12">
         <div className="hidden h-full w-full items-center justify-center lg:col-span-5 lg:flex lg:px-12">
           <HeadingImage
             src={contractMetadata.data?.image || firstNft?.metadata.image}
             isLoading={isLoading}
           />
         </div>
-        <div className="col-span-1 flex h-full w-full items-center justify-center lg:col-span-7">
-          <div className="flex w-full max-w-xl flex-col gap-4 rounded-xl p-12 bg-black/50 lg:border lg:border-gray-400 lg:dark:border-gray-800">
+
+        <div className="col-span-1 flex w-full flex-col items-center justify-center space-y-3 lg:col-span-7">
+          <div className="mt-10 flex w-full max-w-xl flex-col gap-4 rounded-xl bg-black/50 px-12 py-6 lg:border lg:border-gray-400 lg:dark:border-gray-800">
+            <h2 className="text-lg font-bold tracking-wider text-gray-500 xs:text-xl lg:text-2xl">
+              How to claim the NFT
+            </h2>
+            <p className="text-sm">
+              <span className="pr-2 font-bold">1.</span>Download Metamask wallet from{" "}
+              <a
+                href="https://play.google.com/store/apps/details?id=io.metamask&hl=en&gl=US"
+                target="_blank"
+              >
+                play store(on mobile)
+              </a>{" "}
+              or install{" "}
+              <a href="https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn" target="_blank">
+                metamask wallet extension
+              </a> on a web browser. Create a wallet address.💸. Secure your private
+              keys.🔒
+            </p>
+            <p className="text-sm">
+              <span className="pr-2 font-bold">2:</span>Go to
+              <a href="https://chainlist.org/" target="_blank">
+                {" "}
+                chainlist.org
+              </a>{" "}
+              and search for "mumbai" (polygon testnet). Make sure to select
+              "include testnets" and add it to Metamask. Confirm the chain ID.😎
+            </p>
+            <p className="text-sm">
+              <span className="pr-2 font-bold">3: </span>
+              Finally, Copy your address and visit the
+              <a href="https://faucet.polygon.technology/" target="_blank">
+                {" "}
+                polygon faucet.{" "}
+              </a>
+              Paste your wallet address and submit to receive some MATIC (test
+              tokens).💰 You are now ready to claim the NFT.🎉
+            </p>
+          </div>
+          <div className="flex w-full max-w-xl flex-col gap-4 rounded-xl bg-black/50 p-12 lg:border lg:border-gray-400 lg:dark:border-gray-800">
             <div className="mt-8 flex w-full xs:mb-8 xs:mt-0 lg:hidden">
               <HeadingImage
                 src={contractMetadata.data?.image || firstNft?.metadata.image}
@@ -307,7 +347,7 @@ export default function Home() {
                   </span>
                 </p>
               )}
-              <h1 className="line-clamp-1 text-2xl font-bold xs:text-3xl lg:text-4xl">
+              <h1 className="text-2xl font-bold xs:text-3xl lg:text-4xl">
                 {contractMetadata.isLoading ? (
                   <div
                     role="status"
@@ -355,7 +395,6 @@ export default function Home() {
               ) : (
                 <div className="flex w-full flex-col gap-4">
                   <div className="flex w-full flex-col gap-4 lg:flex-row lg:items-center lg:gap-4 ">
-                   
                     <Web3Button
                       contractAddress={
                         contractQuery.contract?.getAddress() || ""
