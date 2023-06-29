@@ -34,13 +34,16 @@ export const HeadingImage: React.FC<HeadingImage> = ({
         <div className="mx-auto h-full w-full self-center">
           {src ? (
             <div className="relative">
-              <MediaRenderer
+              <img
+                src={frameImage}
+                alt="Frame"
+                className="absolute inset-0 h-full w-full"
+              />
+              <img
                 src={src}
-                width="100%"
-                height="100%"
+                alt="NFT Image"
                 className="block h-full w-full object-contain"
               />
-             
             </div>
           ) : (
             <div className="flex h-full w-full items-center justify-center rounded bg-gray-300 dark:bg-gray-700">

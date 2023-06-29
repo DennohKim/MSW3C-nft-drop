@@ -371,7 +371,7 @@ export default function Home() {
                   </h1>
                   {contractMetadata.data?.description ||
                   contractMetadata.isLoading ? (
-                    <div className="line-clamp-2 text-gray-500">
+                    <div className="line-clamp-2 text-gray-300">
                       {contractMetadata.isLoading ? (
                         <div
                           role="status"
