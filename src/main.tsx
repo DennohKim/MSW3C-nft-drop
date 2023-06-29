@@ -11,6 +11,7 @@ import {
   chainConst,
   relayerUrlConst,
 } from "./consts/parameters";
+import { BrowserRouter } from "react-router-dom";
 
 const container = document.getElementById("root");
 const root = createRoot(container!);
@@ -32,9 +33,11 @@ const activeChain = getChainBySlug(network); */
 
 root.render(
   <React.StrictMode>
-    <ThirdwebProvider activeChain={chain} sdkOptions={sdkOptions}>
-      <Toaster />
-      <App />
-    </ThirdwebProvider>
+    <BrowserRouter>
+      <ThirdwebProvider activeChain={chain} sdkOptions={sdkOptions}>
+        <Toaster />
+        <App />
+      </ThirdwebProvider>
+    </BrowserRouter>
   </React.StrictMode>,
 );
