@@ -2,7 +2,7 @@
 
 // Your smart contract address (available on the thirdweb dashboard)
 // For existing collections: import your existing contracts on the dashboard: https://thirdweb.com/dashboard
-export const contractConst = "0xc8E126c4828edab150B4b6A97f34bB8dDe2DF873";
+export const contractConst = "0x5e8C3Cc613eEFD64C1AdD46bA41649A7Cc278539";
 
 // The name of the chain your contract is deployed to.
 // Provide a string for standard chains, or import one from @thirdweb-dev/chains package.
